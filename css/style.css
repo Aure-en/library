@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  background: #eed9d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 1140px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr 15px 1fr;
+}
+
+.separator {
+  background: #eed9d3;
+}
+
+button,
+select {
+  border: none;
+  background: none;
+  appearance: none;
+}
+button:focus,
+select:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@font-face {
+  font-family: "dream_orphansregular";
+  src: url("../sass/assets/fonts/dream_orphans-webfont.eot");
+  src: url("../sass/assets/fonts/dream_orphans-webfont.eot?#iefix") format("embedded-opentype"), url("../sass/assets/fonts/dream_orphans-webfont.woff2") format("woff2"), url("../sass/assets/fonts/dream_orphans-webfont.woff") format("woff"), url("../sass/assets/fonts/dream_orphans-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  color: #696969;
+  font-family: "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  text-align: justify;
+}
+
+.bookmark {
+  font-family: "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.bookmark__quote, .bookmark__statistics {
+  font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  font-weight: 300;
+}
+.bookmark__statistics {
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "dream_orphansregular", Helvetica, Verdana, "Trebuchet MS", "Calibri Light", Arial;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  color: #353535;
+}
+
+.sort {
+  font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  color: #696969;
+  font-weight: 300;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.credit {
+  text-align: end;
+}
+
+.btn--add {
+  font-size: 1.25rem;
+  color: #a3bdc8;
+}
+
+.book {
+  background: transparent;
+  width: 150px;
+  height: 200px;
+  perspective: 1000px;
+}
+.book__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.book:hover .book__inner {
+  transform: rotateY(180deg);
+}
+.book__front, .book__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.book__front {
+  background-color: #fff;
+}
+.book__back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rating:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rating > input:checked ~ label {
+  color: #ffc700;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+header {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav select {
+  margin-left: auto;
+}
+
+.sort {
+  display: flex;
+}
+
+.page {
+  background: #f9f9f9;
+  position: relative;
+}
+
+.first {
+  background-image: url("../sass/assets/images/page.png");
+  background-size: auto 100%;
+}
+
+.second {
+  padding: 2rem 3rem;
+}
+
+.bookmark {
+  position: absolute;
+  width: 200px;
+  left: 50px;
+}
+.bookmark__background {
+  position: absolute;
+  width: 0;
+  height: 700px;
+  border-left: 100px solid #a3bdc8;
+  border-right: 100px solid #a3bdc8;
+  border-bottom: 100px solid transparent;
+}
+.bookmark__front {
+  position: relative;
+  height: 575px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.library {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

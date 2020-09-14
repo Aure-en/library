@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/9fbb921c08.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="first page">
+
+      <div class="bookmark">
+        <div class="bookmark__background"></div>
+        <div class="bookmark__front">
+          <h1>WELCOME TO YOUR LIBRARY</h1>
+          <div class="bookmark__quote">The more that you read, the more things you will know. The more that you learn, the more places you'll go.<div class="credit">—Dr. Seuss</div></div>
+          <div class="bookmark__statistics">
+            You have read:
+            <ul>
+              <li><span class="books"></span> Books</li>
+              <li><span class="authors"></span> Authors</li>
+              <li><span class="pages"></span> Pages</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <span class="page_number">1</span>
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="second page">
+
+      <header>
+
+        <button class="btn btn--add" data-toggle="add"><i class="fas fa-plus"></i></button>
+
+        <div id="add" style="display: none">
+
+          <form class="add__form">
+            <label>
+              Title
+              <input type="text" name="title" required>
+            </label>
+
+            <label>
+              Author
+              <input type="text" name="author" required>
+            </label>
+
+            <label>
+              Pages
+              <input type="text" name="pages">
+            </label>
+
+            <label>
+              Status
+              <input type="text" name="status">
+            </label>
+
+            <fieldset class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1" title="text">1 star</label>
+            </fieldset>
+
+            <input type="submit" value="Add a new book">
+
+          </form>
+
+        </div>
+
+        <nav>
+          <ul class="status sort">
+            <li><button type="button" class="sort">All</button></li>
+            <li><button type="button" class="sort">Read</button></li>
+            <li><button type="button" class="sort">Unread</button></li>
+            <li><button type="button" class="sort">Favorites</button></li>
+          </ul>
+
+          <select name="sort" class="sort">
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="rating">Rating</option>
+          </select>
+        </nav>
+      </header>
+
+      <main class="library">
+
+        <article class="book">
+          <div class="book__inner">
+            <div class="book__front">
+              <img src="sass/assets/images/placeholder.png">
+            </div>
+    
+            <div class="book__back">
+              <h2 class="book__title">Title</h2>
+              <h3 class="book__author">Author</h3>
+              <span class="book__page">Page</span>
+              <span class="book__status">Status</span>
+              <span class="book__rating">Rating</span>
+              <button type="button" class="btn book__more">More</button>
+            </div>
+          </div>
+
+          <h3>Title</h3>
+
+        </article>
+
+      </main>
+
+      <span class="page_number">2</span>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

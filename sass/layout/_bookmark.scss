@@ -1,0 +1,21 @@
+.bookmark {
+  position: absolute;
+  width: 200px;
+  left: 50px;
+
+  &__background {
+    position: absolute;
+    width: 0;
+    height: 700px;
+    border-left: 100px solid $main-color;
+    border-right: 100px solid $main-color;
+    border-bottom: 100px solid transparent;
+  }
+
+  &__front {
+    position: relative;
+    height: 575px;
+    @include flexbox (column, space-between, center);
+    padding: 1.5rem 2rem;
+  }
+}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'dream_orphansregular';
+  src: url('../sass/assets/fonts/dream_orphans-webfont.eot');
+  src: url('../sass/assets/fonts/dream_orphans-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../sass/assets/fonts/dream_orphans-webfont.woff2') format('woff2'),
+       url('../sass/assets/fonts/dream_orphans-webfont.woff') format('woff'),
+       url('../sass/assets/fonts/dream_orphans-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: $font-color;
+  font-family: $font-primary;
+  text-align: justify;
+}
+
+.bookmark {
+  font-family: $font-primary;
+  color: $bookmark-color;
+  font-size: 1.125rem;
+  line-height: 1.5;
+
+  &__quote,
+  &__statistics {
+    font-family: $font-secondary;
+    font-weight: 300;
+  }
+
+  &__statistics {
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  color: $accent-color;
+}
+
+.sort {
+  font-family: $font-secondary;
+  color: $font-color;
+  font-weight: 300;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.credit {
+  text-align: end;
+}
+
+.btn--add {
+  font-size: 1.25rem;
+  color: $main-color;
+}
+
+.book {
+
+
+
+}

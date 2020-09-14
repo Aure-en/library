@@ -1,0 +1,22 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Bookshelf where one can store their read / unread books.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d./css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aure-en/library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Aure-en/library/issues"
+  },
+  "homepage": "https://github.com/Aure-en/library#readme"
+}
