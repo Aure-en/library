@@ -3,7 +3,7 @@
 $page-color: #f9f9f9;
 $color-primary: #053630;
 $color-background: #eedfda;
-$color-secondary: rgb(155, 88, 88);
+$color-secondary: rgb(165, 98, 98);
 $font-color: #353535;
 $accent-color: #353535;
 $bookmark-color: #fff;
@@ -15,3 +15,6 @@ $font-secondary: 'Roboto', 'Calibri Light', "Trebuchet MS", Helvetica, Verdana, 
 
 //Padding
 $padding-page: 3.25rem;
+
+//Shadow
+$box-shadow: 0 0 5px rgba($color-primary, 0.3);

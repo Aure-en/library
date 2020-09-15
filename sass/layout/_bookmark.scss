@@ -7,7 +7,7 @@
   &__background {
     position: absolute;
     width: 0;
-    height: 700px;
+    height: 650px;
     border-left: 100px solid $color-secondary;
     border-right: 100px solid $color-secondary;
     border-bottom: 100px solid transparent;
@@ -15,7 +15,7 @@
 
   &__front {
     position: relative;
-    height: 575px;
+    height: 450px;
     @include flexbox (column, space-between, center);
     padding: 1.5rem 2rem;
   }

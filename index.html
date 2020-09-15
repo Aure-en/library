@@ -23,14 +23,6 @@
         <div class="bookmark__front">
           <h1>WELCOME TO YOUR LIBRARY</h1>
           <div class="bookmark__quote">The more that you read, the more things you will know. The more that you learn, the more places you'll go.<div class="credit">—Dr. Seuss</div></div>
-          <div class="bookmark__statistics">
-            You have read:
-            <ul>
-              <li><span class="books"></span> Books</li>
-              <li><span class="authors"></span> Authors</li>
-              <li><span class="pages"></span> Pages</li>
-            </ul>
-          </div>
         </div>
 
       </div>
@@ -52,7 +44,7 @@
 
       </div>
 
-      <span class="page_number">1</span>
+      <span class="page__number" aria-hidden="true">1</span>
 
     </div>
 
@@ -66,43 +58,43 @@
 
           <button class="btn btn--add" data-toggle="add"><i class="fas fa-plus"></i></button>
 
-          <form class="add__form">
-            <label>
-              Title
-              <input type="text" name="title" required>
-            </label>
+          <div class="add__container" style="display: none">
 
-            <label>
-              Author
-              <input type="text" name="author" required>
-            </label>
+            <svg class="add__icon" viewBox="0 0 16 16" class="bi bi-book" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
 
-            <label>
-              Pages
-              <input type="text" name="pages">
-            </label>
+            <form class="add__form">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" required>
+              
+              <label for="author">Author</label>
+              <input type="text" name="author" id="author" required>
+              
+              <label for="pages">Pages</label>
+              <input type="text" name="pages" id="pages">
+    
+              <label for="status">Status</label>
+              <input type="text" name="status" id="status">
+          
+              <fieldset class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="text">1 star</label>
+              </fieldset>
 
-            <label>
-              Status
-              <input type="text" name="status">
-            </label>
+              <input type="submit" value="Add a new book">
 
-            <fieldset class="rating">
-              <input type="radio" id="star5" name="rating" value="5">
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rating" value="4">
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rating" value="3">
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rating" value="2">
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rating" value="1">
-              <label for="star1" title="text">1 star</label>
-            </fieldset>
+            </form>
 
-            <input type="submit" value="Add a new book">
-
-          </form>
+          </div>
           
         </div>
 
@@ -146,7 +138,7 @@
 
       </main>
 
-      <span class="page_number">2</span>
+      <span class="page__number" aria-hidden="true">2</span>
 
     </div>
 

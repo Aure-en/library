@@ -33,7 +33,7 @@
     background-color: #fff;
     transform: rotateY(180deg);
     padding: 1rem;
-    @include flexbox(column, flex-start, center);
+    display: grid;
   }
 
 }

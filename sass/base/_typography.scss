@@ -11,7 +11,7 @@
 
 body {
   color: $font-color;
-  font-family: $font-primary;
+  font-family: $font-secondary;
   text-align: justify;
 }
 
@@ -47,12 +47,11 @@ h2 {
 }
 
 .fill {
-  font-family: 'Times New Roman';
+  font-family: $font-primary;
 
   p {
     margin-bottom: 1rem;
   }
-
 }
 
 .heading1,
@@ -98,4 +97,16 @@ h2 {
 .btn--add {
   font-size: 1.25rem;
   color: $color-primary;
+}
+
+.add {
+  font-size: .875rem;
+}
+
+.page__number {
+  font-family: $font-primary;
+  background: $color-primary;
+  background: -webkit-linear-gradient($color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

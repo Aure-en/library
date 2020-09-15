@@ -20,16 +20,16 @@
   content: '★ ';
 }
 .rating > input:checked ~ label {
-  color: #ffc700;    
+  color: lighten($color-secondary, 10%);    
 }
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-  color: #deb217;  
+  color: lighten($color-secondary, 10%);  
 }
 .rating > input:checked + label:hover,
 .rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: lighten($color-secondary, 10%);
 }

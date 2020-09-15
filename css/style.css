@@ -78,8 +78,8 @@ body {
 }
 
 .separator {
-  background: #cca6a6;
-  width: 5px;
+  background: #caa3a3;
+  width: 3px;
 }
 
 button,
@@ -97,6 +97,9 @@ input {
   border: none;
   background: transparent;
 }
+input:focus {
+  outline: none;
+}
 
 img {
   width: 100%;
@@ -113,7 +116,7 @@ img {
 }
 body {
   color: #353535;
-  font-family: "Times New Roman", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   text-align: justify;
 }
 
@@ -147,7 +150,7 @@ h2 {
 }
 
 .fill {
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
 }
 .fill p {
   margin-bottom: 1rem;
@@ -197,6 +200,18 @@ h2 {
   color: #053630;
 }
 
+.add {
+  font-size: 0.875rem;
+}
+
+.page__number {
+  font-family: "Times New Roman", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  background: #053630;
+  background: -webkit-linear-gradient(#053630, #a56262);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .book {
   background: transparent;
   width: 150px;
@@ -227,9 +242,7 @@ h2 {
   background-color: #fff;
   transform: rotateY(180deg);
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
 }
 
 .rating {
@@ -258,12 +271,12 @@ h2 {
 }
 
 .rating > input:checked ~ label {
-  color: #ffc700;
+  color: #b88282;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-  color: #deb217;
+  color: #b88282;
 }
 
 .rating > input:checked + label:hover,
@@ -271,24 +284,59 @@ h2 {
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: #b88282;
 }
 
 .add {
   position: relative;
 }
-.add__form {
+.add__container {
   position: absolute;
+  top: 3.25rem;
   z-index: 1;
   background: #f9f9f9;
-  padding: 1.5rem;
-  border: 1px solid #053630;
+  padding: 2rem 3rem;
+  border: 1px solid #a56262;
+  box-shadow: 0 0 5px rgba(5, 54, 48, 0.3);
   border-radius: 2.5px;
+}
+.add__form {
+  display: flex;
+  flex-direction: column;
+}
+.add__icon {
+  width: 50px;
+  fill: #053630;
+  margin: 0 auto;
+  display: block;
+  position: relative;
 }
 
 input[type=text] {
-  height: 1.5rem;
-  border: 1px solid #0b7c6e;
+  height: 1.75rem;
+  padding-left: 0.5rem;
+  border: 1px solid #90aaa7;
+  border-radius: 2px;
+}
+input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(5, 54, 48, 0.3);
+  border: 1px solid #b88282;
+}
+
+input[type=submit] {
+  background: #90aaa7;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  margin: 1.125rem 0 0.35rem 0;
 }
 
 header {
@@ -314,16 +362,21 @@ nav select {
   flex: 1;
   padding: 3.25rem;
 }
+.page__number {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+}
 
 .first {
   background-size: auto 100%;
-  border-radius: 2.5px 0 2.5px 0;
+  border-radius: 2.5px 0 0 2.5px;
   overflow: hidden;
 }
 
 .second {
   padding: 2rem 3rem;
-  border-radius: 0 2.5px 0 2.5px;
+  border-radius: 0 2.5px 2.5px 0;
 }
 
 .fill {
@@ -345,14 +398,14 @@ nav select {
 .bookmark__background {
   position: absolute;
   width: 0;
-  height: 700px;
-  border-left: 100px solid #9b5858;
-  border-right: 100px solid #9b5858;
+  height: 650px;
+  border-left: 100px solid #a56262;
+  border-right: 100px solid #a56262;
   border-bottom: 100px solid transparent;
 }
 .bookmark__front {
   position: relative;
-  height: 575px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

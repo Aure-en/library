@@ -72,8 +72,8 @@ body {
 }
 
 .separator {
-  background: lighten($color-secondary, 25%);
-  width: 5px;
+  background: lighten($color-secondary, 20%);
+  width: 3px;
 }
 
 button,
@@ -90,8 +90,11 @@ select {
 input {
   border: none;
   background: transparent;
-}
 
+  &:focus {
+    outline: none;
+  }
+}
 
 img {
   width: 100%;
