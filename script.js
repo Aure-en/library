@@ -1,3 +1,7 @@
+//Variables
+let library = [];
+let rating;
+
 //Book constructor
 function Book(title, author, pages, status, rating, comment) {
   this.title = title;
@@ -8,11 +12,8 @@ function Book(title, author, pages, status, rating, comment) {
   this.comment = comment;
 }
 
-//Library
-let library = [];
-
 //Create a DOM Element from the book.
-function createBook(book) {
+function addBook(book) {
   let newBook = document.createElement("article");
   newBook.classList.add("book");
   newBook.innerHTML = 
@@ -44,6 +45,28 @@ function displayBook(library) {
 //Filter the library
 
 //Create a new book object from the user's input
+function createBook() {
+  let book = new Book (
+    document.querySelector("#title").value,
+    document.querySelector("#author").value,
+    document.querySelector("#status").value,
+    getRating(),
+    document.querySelector("#comment").innerHTML
+  );
+    library.push(book);
+}
+
+//Get the rating of the book
+function getRating() {
+  let stars = document.querySelectorAll("[name='rating']");
+
+  for (let i = 0; i < stars.length ; i++) {
+    if (stars[i].checked) {
+      rating = stars[i].getAttribute("id").slice(-1);
+      break;
+    }
+  }
+}
 
 //Display the new book form
 
