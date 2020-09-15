@@ -1,0 +1,16 @@
+   * {
+    scrollbar-width: thin;
+    scrollbar-color: lighten($color-secondary, 15%) $page-color;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+  *::-webkit-scrollbar-track {
+    background: $page-color;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: lighten($color-secondary, 15%);
+    border-radius: 1.25rem;
+    border: 0.1875rem solid $page-color;
+  }

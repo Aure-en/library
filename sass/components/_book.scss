@@ -1,7 +1,7 @@
 .book {
   background: transparent;
-  width: 150px;
-  height: 200px;
+  width: 7.5rem;
+  height: 10rem;
   perspective: 1000px;
 
   &__inner {
@@ -34,6 +34,10 @@
     transform: rotateY(180deg);
     padding: 1rem;
     display: grid;
+  }
+
+  & > h2 {
+    padding: .5rem;
   }
 
 }

@@ -1,5 +1,9 @@
 .library {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 2rem 0;
+  grid-gap: 3rem 1rem;
+  overflow-y: auto;
+  padding: 0 1.5rem 0 2.5rem;
+  margin: 1.5rem 0;
+  max-height: 38rem;
 }
