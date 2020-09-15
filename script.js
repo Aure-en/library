@@ -1,4 +1,5 @@
 //Variables
+let books = document.querySelectorAll(".book");
 let library = [];
 let rating;
 
@@ -14,6 +15,7 @@ function Book(title, author, pages, status, rating) {
 //Create a DOM Element from the book.
 function addBook(book) {
   let newBook = document.createElement("article");
+  newBook.setAttribute("data-status", `${book.status}`);
   newBook.classList.add("book");
   newBook.innerHTML = 
     `<div class="book__inner">
@@ -33,6 +35,9 @@ function addBook(book) {
     <h2>${book.title}</h2>`;
   
   document.querySelector("main").append(newBook);
+
+  //Update books variable
+  books = document.querySelectorAll(".book");
 }
 
 //Function looping through the library array to display each book on the page.
@@ -50,6 +55,7 @@ function createBook(e) {
   let book = new Book (
     document.querySelector("#title").value,
     document.querySelector("#author").value,
+    document.querySelector("#pages").value,
     document.querySelector("#status").value,
     getRating()
   );
@@ -90,3 +96,37 @@ function close(event) {
 }
 
 closeBtn.forEach( btn => btn.addEventListener("click", close));
+
+//Filters books displayed in the library
+
+function filterStatus(status) {
+
+  for (let book of books) {
+    if (book.dataset.status == status) {
+      book.classList.remove("hidden");
+    } else {
+      book.classList.add("hidden");
+    }
+  }
+}
+
+function filterFavorite() {
+
+  for (let book of books) {
+    if (!book.classList.contains("favorite")) {
+      book.classList.add("hidden");
+    }
+  }
+}
+
+function displayAll() {
+
+  for (let book of books) {
+    book.classList.remove("hidden");
+  }
+}
+
+document.querySelector("#filter__all").addEventListener("click", displayAll);
+document.querySelector("#filter__read").addEventListener("click", () => filterStatus("read"));
+document.querySelector("#filter__unread").addEventListener("click", () => filterStatus("unread"));
+document.querySelector("#filter__favorites").addEventListener("click", filterFavorite);

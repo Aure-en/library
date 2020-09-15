@@ -102,10 +102,10 @@
 
         <nav>
           <ul class="status sort">
-            <li><button type="button" class="sort">All</button></li>
-            <li><button type="button" class="sort">Read</button></li>
-            <li><button type="button" class="sort">Unread</button></li>
-            <li><button type="button" class="sort">Favorites</button></li>
+            <li><button type="button" class="sort" id="filter__all">All</button></li>
+            <li><button type="button" class="sort" id="filter__read">Read</button></li>
+            <li><button type="button" class="sort" id="filter__unread">Unread</button></li>
+            <li><button type="button" class="sort" id="filter__favorites">Favorites</button></li>
           </ul>
 
           <select name="sort" class="sort">
@@ -218,7 +218,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book" data-status="unread">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -258,7 +258,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book" data-status="unread">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -278,7 +278,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book" data-status="read">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -298,7 +298,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book favorite">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -318,7 +318,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book favorite">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -338,7 +338,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book favorite" data-status="unread">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
@@ -358,7 +358,7 @@
 
         </article>
 
-        <article class="book">
+        <article class="book favorite" data-status="read">
           <div class="book__inner">
             <div class="book__front">
               <img src="https://via.placeholder.com/150x200">
