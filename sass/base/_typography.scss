@@ -21,8 +21,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 
-  &__quote,
-  &__statistics {
+  &__quote {
     font-family: $font-secondary;
     font-weight: 300;
   }
@@ -32,16 +31,55 @@ body {
   }
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+
 h1 {
   font-family: $font-title;
   font-size: 2rem;
-  text-align: center;
 }
 
 h2 {
   font-weight: bold;
   color: $accent-color;
+}
+
+.fill {
+  font-family: 'Times New Roman';
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.heading1,
+.heading2,
+.heading3 {
   text-align: center;
+}
+
+.heading1 {
+  color: $color-primary;
+  font-size: 3.25rem;
+}
+
+.heading2 {
+  $color: $color-primary;
+  font-size: 1.125rem;
+  margin: 1rem;
+}
+
+.heading3 {
+  color: lighten($color-primary, 5%);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
 }
 
 .sort {
@@ -54,9 +92,10 @@ h2 {
 
 .credit {
   text-align: end;
+  padding: .25rem 0;
 }
 
 .btn--add {
   font-size: 1.25rem;
-  color: $main-color;
+  color: $color-primary;
 }

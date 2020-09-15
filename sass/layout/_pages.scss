@@ -1,14 +1,27 @@
 .page {
   background: $page-color;
   position: relative;
-  border-radius: 2.5px;
+  flex: 1;
+  padding: $padding-page;
 }
 
 .first {
-  background-image: url('../sass/assets/images/page.png');
   background-size: auto 100%;
+  border-radius: 2.5px 0 2.5px 0;
+  overflow: hidden;
 }
 
 .second {
   padding: 2rem 3rem;
+  border-radius: 0 2.5px 0 2.5px;
+}
+
+.fill {
+  position: absolute;
+  padding: $padding-page 1.25rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
 }

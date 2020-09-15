@@ -62,7 +62,7 @@ body {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  background: #eed9d3;
+  background: #eedfda;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,12 +71,15 @@ body {
 .wrapper {
   width: 1140px;
   height: 800px;
-  display: grid;
-  grid-template-columns: 1fr 15px 1fr;
+  display: flex;
+  background: #2d5a55;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .separator {
-  background: #eed9d3;
+  background: #cca6a6;
+  width: 5px;
 }
 
 button,
@@ -109,18 +112,18 @@ img {
   font-style: normal;
 }
 body {
-  color: #696969;
-  font-family: "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  color: #353535;
+  font-family: "Times New Roman", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   text-align: justify;
 }
 
 .bookmark {
-  font-family: "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
+  font-family: "Times New Roman", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.5;
 }
-.bookmark__quote, .bookmark__statistics {
+.bookmark__quote {
   font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   font-weight: 300;
 }
@@ -128,21 +131,57 @@ body {
   font-weight: 400;
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+
 h1 {
   font-family: "dream_orphansregular", Helvetica, Verdana, "Trebuchet MS", "Calibri Light", Arial;
   font-size: 2rem;
-  text-align: center;
 }
 
 h2 {
   font-weight: bold;
   color: #353535;
+}
+
+.fill {
+  font-family: "Times New Roman";
+}
+.fill p {
+  margin-bottom: 1rem;
+}
+
+.heading1,
+.heading2,
+.heading3 {
   text-align: center;
+}
+
+.heading1 {
+  color: #053630;
+  font-size: 3.25rem;
+}
+
+.heading2 {
+  font-size: 1.125rem;
+  margin: 1rem;
+}
+
+.heading3 {
+  color: #074d45;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
 }
 
 .sort {
   font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
-  color: #696969;
+  color: #353535;
   font-weight: 300;
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -150,11 +189,12 @@ h2 {
 
 .credit {
   text-align: end;
+  padding: 0.25rem 0;
 }
 
 .btn--add {
   font-size: 1.25rem;
-  color: #a3bdc8;
+  color: #053630;
 }
 
 .book {
@@ -242,13 +282,13 @@ h2 {
   z-index: 1;
   background: #f9f9f9;
   padding: 1.5rem;
-  border: 1px solid #a3bdc8;
+  border: 1px solid #053630;
   border-radius: 2.5px;
 }
 
 input[type=text] {
   height: 1.5rem;
-  border: 1px solid #d3dfe5;
+  border: 1px solid #0b7c6e;
 }
 
 header {
@@ -271,29 +311,43 @@ nav select {
 .page {
   background: #f9f9f9;
   position: relative;
-  border-radius: 2.5px;
+  flex: 1;
+  padding: 3.25rem;
 }
 
 .first {
-  background-image: url("../sass/assets/images/page.png");
   background-size: auto 100%;
+  border-radius: 2.5px 0 2.5px 0;
+  overflow: hidden;
 }
 
 .second {
   padding: 2rem 3rem;
+  border-radius: 0 2.5px 0 2.5px;
+}
+
+.fill {
+  position: absolute;
+  padding: 3.25rem 1.25rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .bookmark {
-  position: absolute;
+  position: relative;
+  top: -3.25rem;
   width: 200px;
-  left: 50px;
+  z-index: 1;
 }
 .bookmark__background {
   position: absolute;
   width: 0;
   height: 700px;
-  border-left: 100px solid #a3bdc8;
-  border-right: 100px solid #a3bdc8;
+  border-left: 100px solid #9b5858;
+  border-right: 100px solid #9b5858;
   border-bottom: 100px solid transparent;
 }
 .bookmark__front {
