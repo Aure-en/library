@@ -1,6 +1,11 @@
 .add {
   position: relative;
 
+  &__wrapper {
+    height: 0;
+    overflow: hidden;
+  }
+
   &__container {
     position: absolute;
     top: $padding-page;

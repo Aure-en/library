@@ -107,6 +107,10 @@ img {
   object-fit: contain;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @font-face {
   font-family: "dream_orphansregular";
   src: url("../sass/assets/fonts/dream_orphans-webfont.eot");
@@ -289,6 +293,10 @@ h2 {
 
 .add {
   position: relative;
+}
+.add__wrapper {
+  height: 0;
+  overflow: hidden;
 }
 .add__container {
   position: absolute;

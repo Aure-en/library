@@ -9,7 +9,6 @@ function Book(title, author, pages, status, rating) {
   this.pages = pages;
   this.status = status;
   this.rating = rating;
-  this.comment = comment;
 }
 
 //Create a DOM Element from the book.
@@ -17,22 +16,23 @@ function addBook(book) {
   let newBook = document.createElement("article");
   newBook.classList.add("book");
   newBook.innerHTML = 
-    `<div class="book__content">
-        <div class="book__front">
-          <img>
-        </div>
+    `<div class="book__inner">
+      <div class="book__front">
+        <img>
+      </div>
 
-        <div class="book__back">
-          <h3 class="book__title">${book.title}<h3>
-          <h4 class="book__author">${book.author}<h4>
-          <span class="book__pages">${book.pages}</span>
-          <span class="book__status ${book.status}">${book.status}</span>
-          <span class="book__rating">${book.rating}</span>
-          <button type="button" class="btn">More</button>
-        </div>
-      </div>`;
+      <div class="book__back">
+        <h2 class="book__title">${book.title}<h2>
+        <h3 class="book__author">${book.author}<h3>
+        <span class="book__pages">${book.pages}</span>
+        <span class="book__status ${book.status}">${book.status}</span>
+        <span class="book__rating">${book.rating}</span>
+        <button type="button" class="btn book__more">More</button>
+      </div>
+    </div>
+    <h2>${book.title}</h2>`;
   
-  main.append(newBook);
+  document.querySelector("main").append(newBook);
 }
 
 //Function looping through the library array to display each book on the page.
@@ -45,7 +45,8 @@ function displayBook(library) {
 //Filter the library
 
 //Create a new book object from the user's input
-function createBook() {
+function createBook(e) {
+  e.preventDefault();
   let book = new Book (
     document.querySelector("#title").value,
     document.querySelector("#author").value,
@@ -54,6 +55,11 @@ function createBook() {
   );
     library.push(book);
 }
+
+const submit = document.querySelector(".add__submit");
+submit.addEventListener("click", createBook);
+submit.addEventListener("click", () => console.log(library));
+submit.addEventListener("click", () => addBook(library[0]));
 
 //Get the rating of the book
 function getRating() {
