@@ -3,7 +3,7 @@ let library = [];
 let rating;
 
 //Book constructor
-function Book(title, author, pages, status, rating, comment) {
+function Book(title, author, pages, status, rating) {
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -50,8 +50,7 @@ function createBook() {
     document.querySelector("#title").value,
     document.querySelector("#author").value,
     document.querySelector("#status").value,
-    getRating(),
-    document.querySelector("#comment").innerHTML
+    getRating()
   );
     library.push(book);
 }
@@ -68,6 +67,20 @@ function getRating() {
   }
 }
 
-//Display the new book form
+//Enables display buttons
+const displayBtn = document.querySelectorAll(".btn--show");
 
-//Close the new book forms
+function display(event) {
+  document.querySelector(`#${event.target.closest("button").dataset.toggle}`).classList.remove("hidden");
+}
+
+displayBtn.forEach( btn => btn.addEventListener("click", display));
+
+//Enables closing buttons
+const closeBtn = document.querySelectorAll(".btn--close");
+
+function close(event) {
+  document.querySelector(`#${event.target.closest("button").dataset.toggle}`).classList.add("hidden");
+}
+
+closeBtn.forEach( btn => btn.addEventListener("click", close));
