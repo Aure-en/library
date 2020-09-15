@@ -82,7 +82,11 @@ select {
   &:focus {
     outline: none;
   }
+}
 
+input {
+  border: none;
+  background: transparent;
 }
 
 

@@ -1,10 +1,10 @@
 //Book constructor
-function Book(title, author, pages, status, review, comment) {
+function Book(title, author, pages, status, rating, comment) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.status = status;
-  this.review = review;
+  this.rating = rating;
   this.comment = comment;
 }
 
@@ -22,11 +22,11 @@ function createBook(book) {
         </div>
 
         <div class="book__back">
-          <h3>${book.title}<h3>
-          <h4>${book.author}<h4>
-          <span>${book.pages}</span>
-          <span>${book.status}</span>
-          <span>${book.review}</span>
+          <h3 class="book__title">${book.title}<h3>
+          <h4 class="book__author">${book.author}<h4>
+          <span class="book__pages">${book.pages}</span>
+          <span class="book__status ${book.status}">${book.status}</span>
+          <span class="book__rating">${book.rating}</span>
           <button type="button" class="btn">More</button>
         </div>
       </div>`;
@@ -40,3 +40,11 @@ function displayBook(library) {
     createBook(library[i]);
   }
 }
+
+//Filter the library
+
+//Create a new book object from the user's input
+
+//Display the new book form
+
+//Close the new book forms
