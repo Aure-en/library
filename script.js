@@ -25,7 +25,7 @@ function addBook(book) {
         <h2 class="book__title">${book.title}<h2>
         <h3 class="book__author">${book.author}<h3>
         <span class="book__pages">${book.pages}</span>
-        <span class="book__status ${book.status}">${book.status}</span>
+        <span class="book__status">${book.status}</span>
         <span class="book__rating">${book.rating}</span>
         <button type="button" class="btn book__more">More</button>
       </div>

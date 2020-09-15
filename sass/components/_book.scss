@@ -33,7 +33,7 @@
     background-color: #fff;
     transform: rotateY(180deg);
     padding: 1rem;
-    display: grid;
+    @include flexbox(column, space-between, center);
   }
 
   & > h2 {
