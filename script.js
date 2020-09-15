@@ -16,6 +16,7 @@ function Book(title, author, pages, status, rating) {
 function addBook(book) {
   let newBook = document.createElement("article");
   newBook.setAttribute("data-status", `${book.status}`);
+  newBook.setAttribute("id", `book${library.length}`);
   newBook.classList.add("book");
   newBook.innerHTML = 
     `<div class="book__inner">
@@ -24,6 +25,7 @@ function addBook(book) {
       </div>
 
       <div class="book__back">
+        <button type="button" class="btn btn--delete" data-delete="book${library.length}"><i class="fas fa-times"></i></button>
         <h2 class="book__title">${book.title}<h2>
         <h3 class="book__author">${book.author}<h3>
         <span class="book__pages">${book.pages}</span>
@@ -34,6 +36,7 @@ function addBook(book) {
     </div>
     <h2>${book.title}</h2>`;
   
+  newBook.querySelector(".btn--delete").addEventListener("click", deleteBook);  
   document.querySelector("main").append(newBook);
 
   //Update books variable
@@ -43,6 +46,12 @@ function addBook(book) {
 //Function looping through the library array to display each book on the page.
 function displayBook(library) {
   for (let i = 0 ; i < library.length ; i++) {
+
+    //If the user deleted the book, does nothing.
+    if (library[i] == null) {
+      break;
+    }
+
     addBook(library[i]);
   }
 }
@@ -75,6 +84,12 @@ function getRating() {
       break;
     }
   }
+}
+
+//Delete a book
+function deleteBook(event) {
+  library[event.target.closest("button").dataset.delete] = null;
+  document.querySelector(`#${event.target.closest("button").dataset.delete}`).remove();
 }
 
 //Enables display buttons
