@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-/* Error: Can't find stylesheet to import.
- *   ,
- * 7 | @import "./components/scrollbar";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass/main.scss 7:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-=======
 @charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -351,15 +338,36 @@ h2 {
   width: 50px;
   fill: #053630;
   margin: 0 auto;
->>>>>>> appearance
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 7 \2502  @import \"./components/scrollbar\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/main.scss 7:9  root stylesheet";
+  position: relative;
 }
-<<<<<<< HEAD
-=======
+
+input[type=text] {
+  height: 1.75rem;
+  padding-left: 0.5rem;
+  border: 1px solid #90aaa7;
+  border-radius: 2px;
+}
+input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(5, 54, 48, 0.3);
+  border: 1px solid #b88282;
+}
+
+input[type=submit] {
+  background: #90aaa7;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  margin: 1.125rem 0 0.35rem 0;
+}
 
 header {
   display: flex;
@@ -447,4 +455,3 @@ nav select {
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> appearance
