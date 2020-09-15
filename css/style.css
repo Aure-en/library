@@ -186,7 +186,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-.sort {
+.sort,
+.filter {
   font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   color: #353535;
   font-weight: 300;
@@ -386,7 +387,7 @@ nav select {
   margin-left: auto;
 }
 
-.sort {
+.filter {
   display: flex;
 }
 

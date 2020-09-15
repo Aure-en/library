@@ -43,11 +43,9 @@ function addBook(book) {
 //Function looping through the library array to display each book on the page.
 function displayBook(library) {
   for (let i = 0 ; i < library.length ; i++) {
-    createBook(library[i]);
+    addBook(library[i]);
   }
 }
-
-//Filter the library
 
 //Create a new book object from the user's input
 function createBook(e) {
@@ -97,7 +95,8 @@ function close(event) {
 
 closeBtn.forEach( btn => btn.addEventListener("click", close));
 
-//Filters books displayed in the library
+/*Filters books displayed in the library:
+  - Hide the books who do not have the correct status*/
 
 function filterStatus(status) {
 
@@ -130,3 +129,21 @@ document.querySelector("#filter__all").addEventListener("click", displayAll);
 document.querySelector("#filter__read").addEventListener("click", () => filterStatus("read"));
 document.querySelector("#filter__unread").addEventListener("click", () => filterStatus("unread"));
 document.querySelector("#filter__favorites").addEventListener("click", filterFavorite);
+
+/*Sort books:
+  - Remove them from the document
+  - Sort the library array
+  - Put the books back in the right order */
+
+function sortBooks(event) {
+  books.forEach( book => book.remove());
+  sort(library, event.target.value);
+  displayBook(library);
+  console.log(library);
+}
+
+function sort(arr, by) {
+  return arr.sort( (a, b) => String(a[by]).localeCompare(String([by])) );
+}
+
+document.querySelector(".sort").addEventListener("input", sortBooks);
