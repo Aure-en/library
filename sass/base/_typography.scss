@@ -39,6 +39,7 @@ h2 {
 h1 {
   font-family: $font-title;
   font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -62,7 +63,9 @@ h2 {
 
 .heading1 {
   color: $color-primary;
-  font-size: 3.25rem;
+  font-size: 3rem;
+  font-family: "Playfair Display";
+  padding: 0 2.5rem;
 }
 
 .heading2 {
@@ -110,4 +113,10 @@ h2 {
   background: -webkit-linear-gradient($color-primary, $color-secondary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.fill {
+  .credit {
+    color: $color-primary;
+  }
 }

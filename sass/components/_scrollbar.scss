@@ -1,6 +1,6 @@
    * {
     scrollbar-width: thin;
-    scrollbar-color: lighten($color-secondary, 15%) $page-color;
+    scrollbar-color: $color-secondary $page-color;
   }
   
   *::-webkit-scrollbar {
@@ -10,7 +10,7 @@
     background: $page-color;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: lighten($color-secondary, 15%);
+    background-color: $color-secondary;
     border-radius: 1.25rem;
     border: 0.1875rem solid $page-color;
   }
