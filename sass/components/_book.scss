@@ -3,6 +3,12 @@
   perspective: 1000px;
   @include flexbox(column, flex-start, center);
 
+  .btn--delete {
+    position: absolute;
+    right: .25rem;
+    top: .25rem;
+  }
+
   &__inner {
     position: relative;
     width: 7.5rem;
@@ -32,7 +38,17 @@
     background-color: #fff;
     transform: rotateY(180deg);
     padding: 1rem;
-    @include flexbox(column, space-between, center);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    border: 1px solid lighten($color-primary, 10%);
+  }
+
+  &__title,
+  &__author,
+  &__rating,
+  &__more {
+    grid-column: 1 / -1;
   }
 
   & > h2 {

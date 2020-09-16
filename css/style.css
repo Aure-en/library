@@ -78,11 +78,6 @@ body {
   border-radius: 5px;
 }
 
-.separator {
-  background: #ecd7d7;
-  width: 3px;
-}
-
 button,
 select {
   border: none;
@@ -232,6 +227,11 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+.book .btn--delete {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+}
 .book__inner {
   position: relative;
   width: 7.5rem;
@@ -256,10 +256,13 @@ h2 {
   background-color: #fff;
   transform: rotateY(180deg);
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  border: 1px solid #314379;
+}
+.book__title, .book__author, .book__rating, .book__more {
+  grid-column: 1/-1;
 }
 .book > h2 {
   padding: 0.5rem;
