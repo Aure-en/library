@@ -2,6 +2,7 @@
   background: $page-color;
   position: relative;
   flex: 1;
+  border: 1px solid $color-primary;
 
   &__number {
     position: absolute;
@@ -15,11 +16,14 @@
   border-radius: 2.5px 0 0 2.5px;
   overflow: hidden;
   padding: $padding-page;
+  border-right: 2px solid $color-secondary;
+  max-width: 50%;
 }
 
 .second {
   border-radius: 0 2.5px 2.5px 0;
   padding: 1.5rem 0;
+  border-left: 2px solid $color-secondary;
 }
 
 .fill {

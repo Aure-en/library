@@ -1,22 +1,11 @@
 .bookmark {
   position: relative;
   top: -$padding-page;
+  border-right: 1px solid #fff;
+  background: url('../sass/assets/images/bookmark.png');
   width: 200px;
+  height: 650px;
+  @include flexbox (column, flex-start, center);
+  padding: 1.5rem 2rem;
   z-index: 1;
-
-  &__background {
-    position: absolute;
-    width: 0;
-    height: 650px;
-    border-left: 100px solid $color-secondary;
-    border-right: 100px solid $color-secondary;
-    border-bottom: 100px solid transparent;
-  }
-
-  &__front {
-    position: relative;
-    height: 450px;
-    @include flexbox (column, space-between, center);
-    padding: 1.5rem 2rem;
-  }
 }
