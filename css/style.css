@@ -181,7 +181,7 @@ h2 {
 }
 
 .heading3 {
-  color: #293967;
+  color: #314379;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -190,7 +190,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-.sort {
+.sort,
+.filter button {
   font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   color: #353535;
   font-weight: 300;
@@ -226,14 +227,15 @@ h2 {
 
 .book {
   background: transparent;
-  width: 7.5rem;
-  height: 10rem;
   perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .book__inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 7.5rem;
+  height: 10rem;
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -324,6 +326,28 @@ h2 {
   border: 0.1875rem solid #f9f9f9;
 }
 
+.btn {
+  cursor: pointer;
+}
+.btn--text {
+  background: #4a5d93;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  font-size: 0.875rem;
+}
+.btn--icon {
+  font-size: 1.125rem;
+  color: #222f55;
+  transition: all 0.15s ease-in;
+}
+.btn--icon:hover {
+  color: #ca9393;
+  transform: scale(1.2);
+}
+
 .add {
   position: relative;
 }
@@ -364,17 +388,6 @@ input[type=text]:focus {
   border: 1px solid #dbb5b5;
 }
 
-input[type=submit] {
-  background: #bbbbbb;
-  padding: 0.75rem 1rem;
-  margin-top: 1rem;
-  border-radius: 5px;
-  align-self: center;
-  color: white;
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
 label {
   display: inline-block;
   margin: 1.125rem 0 0.35rem 0;
@@ -382,6 +395,7 @@ label {
 
 header {
   display: flex;
+  align-items: center;
   padding: 0 1.5rem;
 }
 
@@ -394,8 +408,23 @@ nav select {
   margin-left: auto;
 }
 
-.sort {
+.filter {
   display: flex;
+  cursor: pointer;
+}
+
+.filter button {
+  transition: all 0.15s ease-in;
+}
+.filter button:hover {
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #222f55;
+}
+
+select {
+  padding: 1rem;
+  line-height: 1.9;
 }
 
 .page {

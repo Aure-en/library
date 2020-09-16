@@ -1,13 +1,12 @@
 .book {
   background: transparent;
-  width: 7.5rem;
-  height: 10rem;
   perspective: 1000px;
+  @include flexbox(column, flex-start, center);
 
   &__inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 7.5rem;
+    height: 10rem;
     text-align: center;
     transition: transform 0.5s;
     transform-style: preserve-3d;
