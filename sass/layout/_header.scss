@@ -1,5 +1,5 @@
 header {
-  display: flex;
+  @include flexbox(row, flex-start, center);
   padding: 0 1.5rem;
 }
 
@@ -15,4 +15,21 @@ nav {
 
 .filter {
   display: flex;
+  cursor: pointer;
+}
+
+.filter button {
+  transition: all 0.15s ease-in;
+
+  &:hover {
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: $color-primary;
+  }
+}
+
+select {
+  padding: 1rem;
+  line-height: 1.9;
+
 }

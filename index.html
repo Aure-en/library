@@ -32,7 +32,7 @@
           <div class="title">Mr. Sherlock Holmes</div>
         </div>
 
-        <p>Mr. Sherlock Holmes, who was usually very late in the mornings, save upon those not infrequent occasions when he was up all night, was seated at the breakfast table. I stood upon the hearth-rug and picked up the stick which our visitor had left behind him the night before. It was a fine, thick piece of wood, bulbous-headed, of the sort which is known as a “Penang lawyer.” Just under the head was a broad silver band nearly an inch across. “To James Mortimer, M.R.C.S., from his friends of the C.C.H.,” was engraved upon it, with the date “1884.” It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring.</p>
+        <p>Mr. Sherlock Holmes, who was usually very late in the mornings, save upon those not infrequent occasions when he was up all night, was seated at the breakfast table. I stood upon the hearth-rug and picked up the stick which our visitor had left behind him the night before. It was a fine, thick piece of wood, bulbous-headed, of the sort which is known as a “Penang lawyer.” Just under the head was a broad silver band nearly an inch across. “To James Mortimer, M.R.C.S., from his friends of the C.C.H.,” was engraved upon it, with the date “1884.” It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring. </p>
         <p>“How did you know what I was doing? I believe you have eyes in the back of your head.”</p>
         <p>“I have, at least, a well-polished, silver-plated coffee-pot in front of me,” said he. “But, tell me, Watson, what do you make of our visitor’s stick? Since we have been so unfortunate as to miss him and have no notion of his errand, this accidental souvenir becomes of importance. Let me hear you reconstruct the man by an examination of it.”</p>
 
@@ -50,7 +50,7 @@
 
         <div id="add" class="add">
 
-          <button class="btn btn--show" data-toggle="add__container"><i class="fas fa-plus"></i></button>
+          <button class="btn btn--show btn--icon" data-toggle="add__container" data-content="&#xf067"><i class="fas fa-plus"></i></button>
 
           <div class="add__container" id="add__container">
 
@@ -86,7 +86,7 @@
                 <label for="star1" title="text">1 star</label>
               </fieldset>
 
-              <input class="add__submit" type="submit" value="Add a new book">
+              <input class="btn btn--text add__submit" type="submit" value="Add a new book">
 
             </form>
 
@@ -96,13 +96,14 @@
 
         <nav>
           <ul class="status filter">
-            <li><button type="button" class="filter" id="filter__all">All</button></li>
-            <li><button type="button" class="filter" id="filter__read">Read</button></li>
-            <li><button type="button" class="filter" id="filter__unread">Unread</button></li>
-            <li><button type="button" class="filter" id="filter__favorites">Favorites</button></li>
+            <li><button type="button">All</button></li>
+            <li><button type="button">Read</button></li>
+            <li><button type="button">Unread</button></li>
+            <li><button type="button">Favorites</button></li>
           </ul>
 
           <select name="sort" class="sort">
+            <option value="">Sort by</option>
             <option value="title">Title</option>
             <option value="author">Author</option>
             <option value="rating">Rating</option>
@@ -125,13 +126,21 @@
               <span class="book__page">Page</span>
               <span class="book__status">Status</span>
               <span class="book__rating">Rating</span>
+<<<<<<< HEAD
+=======
+              <button type="button" class="btn book__more">More</button>
+>>>>>>> appearance
             </div>
           </div>
 
           <h2>Title</h2>
 
         </article>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> appearance
       </main>
 
       <span class="page__number" aria-hidden="true">2</span>
