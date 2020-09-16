@@ -13,3 +13,9 @@
       align-items: $align-items;
     }
 }
+
+@mixin hover() {
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: $color-primary;
+}

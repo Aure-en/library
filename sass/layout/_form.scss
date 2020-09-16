@@ -29,6 +29,11 @@
     display: block;
     position: relative;
   }
+
+  label {
+    display: inline-block;
+    margin: 1.125rem 0 0.35rem 0;
+  } 
 }
 
 input[type="text"] {
@@ -42,8 +47,3 @@ input[type="text"] {
     border: 1px solid lighten($color-secondary, 10%);
   }
 }
-
-label {
-  display: inline-block;
-  margin: 1.125rem 0 0.35rem 0;
-} 

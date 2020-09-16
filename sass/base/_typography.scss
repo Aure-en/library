@@ -84,13 +84,32 @@ h2 {
   font-size: 1.5rem;
 }
 
-.sort,
-.filter button {
+.sort button,
+.filter button,
+.sort label {
   font-family: $font-secondary;
   color: $font-color;
   font-weight: 300;
   font-size: 1.125rem;
   text-transform: uppercase;
+}
+
+.sort label {
+  transition: all 0.15s ease-in;
+  font-size: .9375rem;
+  line-height: 1.25;
+
+  &:hover {
+    @include hover();
+  }
+}
+
+.filter button {
+  transition: all 0.15s ease-in;
+
+  &:hover {
+    @include hover();
+  }
 }
 
 .credit {

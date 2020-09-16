@@ -71,8 +71,7 @@ function createBook(e) {
 
 const submit = document.querySelector(".add__submit");
 submit.addEventListener("click", createBook);
-submit.addEventListener("click", () => console.log(library));
-submit.addEventListener("click", () => addBook(library[0]));
+submit.addEventListener("click", () => addBook(library[library.length - 1]));
 
 //Get the rating of the book
 function getRating() {
@@ -140,10 +139,10 @@ function displayAll() {
   }
 }
 
-document.querySelector("#filter__all").addEventListener("click", displayAll);
-document.querySelector("#filter__read").addEventListener("click", () => filterStatus("read"));
-document.querySelector("#filter__unread").addEventListener("click", () => filterStatus("unread"));
-document.querySelector("#filter__favorites").addEventListener("click", filterFavorite);
+document.querySelector("#filter_all").addEventListener("click", displayAll);
+document.querySelector("#filter_read").addEventListener("click", () => filterStatus("read"));
+document.querySelector("#filter_unread").addEventListener("click", () => filterStatus("unread"));
+document.querySelector("#filter_favorites").addEventListener("click", filterFavorite);
 
 /*Sort books:
   - Remove them from the document
@@ -154,11 +153,10 @@ function sortBooks(event) {
   books.forEach( book => book.remove());
   sort(library, event.target.value);
   displayBook(library);
-  console.log(library);
 }
 
 function sort(arr, by) {
-  return arr.sort( (a, b) => String(a[by]).localeCompare(String([by])) );
+  return arr.sort( (a, b) => String(a[by]).localeCompare(String(b[by])) );
 }
 
-document.querySelector(".sort").addEventListener("input", sortBooks);
+document.querySelector(".sort__box label").addEventListener("click", sortBooks);

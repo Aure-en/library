@@ -74,19 +74,8 @@ body {
   display: flex;
   background: url("../sass/assets/images/background.png");
   background-position-x: 30px;
-  padding: 1rem;
+  padding: 0.85rem 1.25rem;
   border-radius: 5px;
-}
-
-button,
-select {
-  border: none;
-  background: none;
-  appearance: none;
-}
-button:focus,
-select:focus {
-  outline: none;
 }
 
 input {
@@ -101,6 +90,10 @@ img {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+input[type=radio] {
+  appearance: none;
 }
 
 .hidden {
@@ -185,13 +178,34 @@ h2 {
   font-size: 1.5rem;
 }
 
-.sort,
-.filter button {
+.sort button,
+.filter button,
+.sort label {
   font-family: "Roboto", "Calibri Light", "Trebuchet MS", Helvetica, Verdana, "Calibri Light", Arial;
   color: #353535;
   font-weight: 300;
   font-size: 1.125rem;
   text-transform: uppercase;
+}
+
+.sort label {
+  transition: all 0.15s ease-in;
+  font-size: 0.9375rem;
+  line-height: 1.25;
+}
+.sort label:hover {
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #222f55;
+}
+
+.filter button {
+  transition: all 0.15s ease-in;
+}
+.filter button:hover {
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #222f55;
 }
 
 .credit {
@@ -239,6 +253,7 @@ h2 {
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
+  border: 1px solid #314379;
 }
 .book:hover .book__inner {
   transform: rotateY(180deg);
@@ -259,7 +274,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  border: 1px solid #314379;
 }
 .book__title, .book__author, .book__rating, .book__more {
   grid-column: 1/-1;
@@ -329,6 +343,15 @@ h2 {
   border: 0.1875rem solid #f9f9f9;
 }
 
+button {
+  border: none;
+  background: none;
+  appearance: none;
+}
+button:focus {
+  outline: none;
+}
+
 .btn {
   cursor: pointer;
 }
@@ -379,6 +402,10 @@ h2 {
   display: block;
   position: relative;
 }
+.add label {
+  display: inline-block;
+  margin: 1.125rem 0 0.35rem 0;
+}
 
 input[type=text] {
   height: 1.75rem;
@@ -389,11 +416,6 @@ input[type=text] {
 input[type=text]:focus {
   box-shadow: 0 0 5px rgba(34, 47, 85, 0.3);
   border: 1px solid #dbb5b5;
-}
-
-label {
-  display: inline-block;
-  margin: 1.125rem 0 0.35rem 0;
 }
 
 header {
@@ -407,27 +429,21 @@ nav {
   align-items: center;
   width: 100%;
 }
-nav select {
-  margin-left: auto;
-}
 
 .filter {
   display: flex;
   cursor: pointer;
 }
 
-.filter button {
-  transition: all 0.15s ease-in;
+.sort {
+  position: relative;
+  margin-left: auto;
 }
-.filter button:hover {
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #222f55;
-}
-
-select {
-  padding: 1rem;
-  line-height: 1.9;
+.sort__box {
+  position: absolute;
+  padding: 0.25rem 0 0 1.3rem;
+  box-shadow: 0 0 10px rgba(34, 47, 85, 0.2);
+  z-index: 1;
 }
 
 .page {

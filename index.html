@@ -96,18 +96,24 @@
 
         <nav>
           <ul class="status filter">
-            <li><button type="button">All</button></li>
-            <li><button type="button">Read</button></li>
-            <li><button type="button">Unread</button></li>
-            <li><button type="button">Favorites</button></li>
+            <li><button type="button" id="filter_all">All</button></li>
+            <li><button type="button" id="filter_read">Read</button></li>
+            <li><button type="button" id="filter_unread">Unread</button></li>
+            <li><button type="button" id="filter_favorites">Favorites</button></li>
           </ul>
 
-          <select name="sort" class="sort">
-            <option value="">Sort by</option>
-            <option value="title">Title</option>
-            <option value="author">Author</option>
-            <option value="rating">Rating</option>
-          </select>
+          <div class="sort">
+
+            <button type="button" data-toggle="sort__box"><i class="fas fa-caret-down"></i> Sort by</button>
+
+              <div class="sort__box">
+                <label>Title<input type="radio" name="sort_by" value="title"></label>
+                <label>Author<input type="radio" name="sort_by" value="author"></label>
+                <label>Rating<input type="radio" name="sort_by" value="rating"></label>
+              </div>
+
+          </div>
+          
         </nav>
       </header>
 
