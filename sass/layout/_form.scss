@@ -36,11 +36,13 @@
   } 
 }
 
-input[type="text"] {
+input[type="text"],
+select {
   height: 1.75rem;
   padding-left: .5rem;
   border: 1px solid desaturate(lighten($color-primary, 50%), 70%);
   border-radius: 2px;
+  background: #fff;
 
   &:focus {
     box-shadow: $box-shadow;

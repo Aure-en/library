@@ -416,13 +416,16 @@ button:focus {
   margin: 1.125rem 0 0.35rem 0;
 }
 
-input[type=text] {
+input[type=text],
+select {
   height: 1.75rem;
   padding-left: 0.5rem;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
+  background: #fff;
 }
-input[type=text]:focus {
+input[type=text]:focus,
+select:focus {
   box-shadow: 0 0 5px rgba(34, 47, 85, 0.3);
   border: 1px solid #dbb5b5;
 }
