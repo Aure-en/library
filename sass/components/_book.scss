@@ -33,6 +33,7 @@
 
   &__front {
     background-color: #fff;
+    @include flexbox(row, center, center);
   }
 
   &__back {

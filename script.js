@@ -1,7 +1,6 @@
 //Variables
 let books = document.querySelectorAll(".book");
 let library = [];
-let rating;
 
 //Book constructor
 function Book(title, author, pages, status, rating) {
@@ -21,19 +20,20 @@ function addBook(book) {
   newBook.innerHTML = 
     `<div class="book__inner">
       <div class="book__front">
-        <img>
+        <h2 class="heading3">${book.title}</h2>
       </div>
 
       <div class="book__back">
         <button type="button" class="btn btn--delete" data-delete="book${library.length}"><i class="fas fa-times"></i></button>
-        <h2 class="book__title">${book.title}<h2>
-        <h3 class="book__author">${book.author}<h3>
-        <span class="book__pages">${book.pages}</span>
+        <h2 class="book__title">${book.title}</h2>
+        <h3 class="book__author">${book.author}</h3>
+        <span class="book__page">${book.pages}</span>
         <span class="book__status">${book.status}</span>
-        <span class="book__rating">${book.rating}</span>
-        <button type="button" class="btn book__more">More</button>
+        <span class="book__rating">${book.rating}⭑</span>
+        <button type="button" class="btn btn--text--small btn--text book__more">More</button>
       </div>
     </div>
+
     <h2>${book.title}</h2>`;
   
   newBook.querySelector(".btn--delete").addEventListener("click", deleteBook);  
@@ -64,7 +64,7 @@ function createBook(e) {
     document.querySelector("#author").value,
     document.querySelector("#pages").value,
     document.querySelector("#status").value,
-    getRating()
+    document.querySelector('input[name="rating"]:checked').value
   );
     library.push(book);
 }
@@ -72,18 +72,6 @@ function createBook(e) {
 const submit = document.querySelector(".add__submit");
 submit.addEventListener("click", createBook);
 submit.addEventListener("click", () => addBook(library[library.length - 1]));
-
-//Get the rating of the book
-function getRating() {
-  let stars = document.querySelectorAll("[name='rating']");
-
-  for (let i = 0; i < stars.length ; i++) {
-    if (stars[i].checked) {
-      rating = stars[i].getAttribute("id").slice(-1);
-      break;
-    }
-  }
-}
 
 //Delete a book
 function deleteBook(event) {
@@ -171,3 +159,14 @@ function sort(arr, by) {
 }
 
 document.querySelectorAll(".sort__box label").forEach( label => label.addEventListener("click", sortBooks));
+
+//Puts an example book
+
+let welcomeBook = new Book(
+  "Welcome to your Library",
+  "Author",
+  "1",
+  "Read",
+  "5");
+
+addBook(welcomeBook);
