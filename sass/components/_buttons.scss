@@ -20,6 +20,12 @@ button {
     align-self: center;
     color: white;
     font-size: 0.875rem;
+
+    &--small {
+      padding: 0.25rem 0.65rem;
+      justify-self: center;
+    }
+
   }
 
   &--icon {

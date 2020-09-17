@@ -104,9 +104,9 @@
 
           <div class="sort">
 
-            <button type="button" data-toggle="sort__box"><i class="fas fa-caret-down"></i> Sort by</button>
+            <button class="btn--toggle" type="button" data-toggle="sort__box"><i class="fas fa-caret-down"></i> Sort by</button>
 
-              <div class="sort__box">
+              <div class="sort__box hidden" id="sort__box">
                 <label>Title<input type="radio" name="sort_by" value="title"></label>
                 <label>Author<input type="radio" name="sort_by" value="author"></label>
                 <label>Rating<input type="radio" name="sort_by" value="rating"></label>
@@ -132,7 +132,7 @@
               <span class="book__page">Page</span>
               <span class="book__status">Status</span>
               <span class="book__rating">Rating</span>
-              <button type="button" class="btn book__more">More</button>
+              <button type="button" class="btn btn--text--small btn--text book__more">More</button>
             </div>
           </div>
 

@@ -109,6 +109,16 @@ function close(event) {
 
 closeBtn.forEach( btn => btn.addEventListener("click", close));
 
+//Enables toggling buttons
+
+const toggleBtn = document.querySelectorAll(".btn--toggle");
+
+function toggle(event) {
+  document.querySelector(`#${event.target.closest("button").dataset.toggle}`).classList.toggle("hidden");
+}
+
+toggleBtn.forEach( btn => btn.addEventListener("click", toggle));
+
 /*Filters books displayed in the library:
   - Hide the books who do not have the correct status*/
 
@@ -151,6 +161,7 @@ document.querySelector("#filter_favorites").addEventListener("click", filterFavo
 
 function sortBooks(event) {
   books.forEach( book => book.remove());
+  console.log(event.target.value);
   sort(library, event.target.value);
   displayBook(library);
 }
@@ -159,4 +170,4 @@ function sort(arr, by) {
   return arr.sort( (a, b) => String(a[by]).localeCompare(String(b[by])) );
 }
 
-document.querySelector(".sort__box label").addEventListener("click", sortBooks);
+document.querySelectorAll(".sort__box label").forEach( label => label.addEventListener("click", sortBooks));

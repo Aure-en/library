@@ -1,16 +1,16 @@
    * {
     scrollbar-width: thin;
-    scrollbar-color: $color-secondary $page-color;
+    scrollbar-color: $color-secondary $color-page;
   }
   
   *::-webkit-scrollbar {
     width: 0.75rem;
   }
   *::-webkit-scrollbar-track {
-    background: $page-color;
+    background: $color-page;
   }
   *::-webkit-scrollbar-thumb {
     background-color: $color-secondary;
     border-radius: 1.25rem;
-    border: 0.1875rem solid $page-color;
+    border: 0.1875rem solid $color-page;
   }
