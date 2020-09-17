@@ -15,7 +15,6 @@ button {
   &--text {
     background: desaturate(lighten($color-primary, 20%), 10%);
     padding: 0.75rem 1rem;
-    margin-top: 1rem;
     border-radius: 5px;
     align-self: center;
     color: white;

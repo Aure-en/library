@@ -24,11 +24,11 @@ function addBook(book) {
       </div>
 
       <div class="book__back">
-        <button type="button" class="btn btn--delete" data-delete="book${library.length}"><i class="fas fa-times"></i></button>
+        <button type="button" class="btn btn--delete" data-index="book${library.length}"><i class="fas fa-times"></i></button>
         <h2 class="book__title">${book.title}</h2>
         <h3 class="book__author">${book.author}</h3>
         <span class="book__page">${book.pages}</span>
-        <span class="book__status">${book.status}</span>
+        <button type="button" class="btn btn--text--small btn--text book__status" data-index="book${library.length}">${book.status}</button>
         <span class="book__rating">${book.rating}⭑</span>
         <button type="button" class="btn btn--text--small btn--text book__more">More</button>
       </div>
@@ -37,6 +37,7 @@ function addBook(book) {
     <h2>${book.title}</h2>`;
   
   newBook.querySelector(".btn--delete").addEventListener("click", deleteBook);  
+  newBook.querySelector(".book__status").addEventListener("click", changeStatus);
   document.querySelector("main").append(newBook);
 
   //Update books variable
@@ -59,12 +60,13 @@ function displayBook(library) {
 //Create a new book object from the user's input
 function createBook(e) {
   e.preventDefault();
+
   let book = new Book (
-    document.querySelector("#title").value,
-    document.querySelector("#author").value,
-    document.querySelector("#pages").value,
-    document.querySelector("#status").value,
-    document.querySelector('input[name="rating"]:checked').value
+    document.querySelector("#title").value || "Title",
+    document.querySelector("#author").value || "Author",
+    document.querySelector("#pages").value || "0",
+    document.querySelector("#status") ? document.querySelector("#status").value : "read",
+    document.querySelector('input[name="rating"]:checked') ? document.querySelector('input[name="rating"]:checked').value : "0"
   );
     library.push(book);
 }
@@ -75,8 +77,25 @@ submit.addEventListener("click", () => addBook(library[library.length - 1]));
 
 //Delete a book
 function deleteBook(event) {
-  library[event.target.closest("button").dataset.delete] = null;
-  document.querySelector(`#${event.target.closest("button").dataset.delete}`).remove();
+  library[event.target.closest("button").dataset.index] = null;
+  document.querySelector(`#${event.target.closest("button").dataset.index}`).remove();
+}
+
+//Change a book status
+function changeStatus(event) {
+
+  let book = document.querySelector(`#${event.target.dataset.index}`);
+  let bookStatus = book.dataset.status;
+  console.log(bookStatus);
+
+  if (bookStatus == "read") {
+    book.setAttribute("data-status", "unread");
+  } else {
+    book.setAttribute("data-status", "read");
+  }
+  
+  bookStatus = book.dataset.status;
+  event.target.innerHTML = bookStatus;
 }
 
 //Enables display buttons
@@ -149,7 +168,6 @@ document.querySelector("#filter_favorites").addEventListener("click", filterFavo
 
 function sortBooks(event) {
   books.forEach( book => book.remove());
-  console.log(event.target.value);
   sort(library, event.target.value);
   displayBook(library);
 }
@@ -166,7 +184,8 @@ let welcomeBook = new Book(
   "Welcome to your Library",
   "Author",
   "1",
-  "Read",
+  "read",
   "5");
 
+library.push(welcomeBook);
 addBook(welcomeBook);
