@@ -17,6 +17,11 @@ function addBook(book) {
   newBook.setAttribute("data-status", `${book.status}`);
   newBook.setAttribute("id", `book${library.length}`);
   newBook.classList.add("book");
+
+  if (book.rating == 5) {
+    newBook.classList.add("favorite");
+  }
+
   newBook.innerHTML = 
     `<div class="book__inner">
       <div class="book__front">
