@@ -78,6 +78,8 @@ h2 {
   color: lighten($color-primary, 10%);
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .title {

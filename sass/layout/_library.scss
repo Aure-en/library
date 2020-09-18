@@ -6,4 +6,8 @@
   padding: 0 1.5rem 0 2.5rem;
   margin: 1.5rem 0;
   max-height: 38rem;
+
+  @media all and (max-width: 735px) {
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  }
 }

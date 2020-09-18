@@ -77,6 +77,11 @@ body {
   padding: 0.85rem 1.25rem;
   border-radius: 5px;
 }
+@media all and (max-width: 675px) {
+  .wrapper {
+    height: 100vh;
+  }
+}
 
 input {
   border: none;
@@ -100,6 +105,11 @@ input[type=radio] {
   display: none !important;
 }
 
+@media all and (max-width: 1030px) {
+  .desktop {
+    display: none;
+  }
+}
 @font-face {
   font-family: "dream_orphansregular";
   src: url("../sass/assets/fonts/dream_orphans-webfont.eot");
@@ -172,6 +182,8 @@ h2 {
   color: #314379;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .title {
@@ -471,6 +483,16 @@ nav {
   bottom: 1.5rem;
   left: 50%;
 }
+@media all and (max-width: 950px) {
+  .page {
+    flex: unset;
+  }
+}
+@media all and (max-width: 675px) {
+  .page {
+    flex: 1;
+  }
+}
 
 .first {
   background-size: auto 100%;
@@ -479,6 +501,17 @@ nav {
   padding: 3rem;
   border-right: 2px solid #ca9393;
   max-width: 50%;
+  min-width: 216px;
+}
+@media all and (max-width: 950px) {
+  .first {
+    padding: 3rem 1vw;
+  }
+}
+@media all and (max-width: 675px) {
+  .first {
+    display: none;
+  }
 }
 
 .second {
@@ -495,6 +528,11 @@ nav {
   right: 0;
   margin: 0 auto;
   width: 80%;
+}
+@media all and (max-width: 950px) {
+  .fill {
+    display: none;
+  }
 }
 
 .bookmark {
@@ -519,6 +557,11 @@ nav {
   padding: 0 1.5rem 0 2.5rem;
   margin: 1.5rem 0;
   max-height: 38rem;
+}
+@media all and (max-width: 735px) {
+  .library {
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

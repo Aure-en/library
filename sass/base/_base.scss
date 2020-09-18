@@ -70,6 +70,11 @@ body {
   background-position-x: 30px;
   padding: .85rem 1.25rem;
   border-radius: 5px;
+
+  @media all and (max-width: 675px) {
+    height: 100vh;
+  }
+
 }
 
 input {
@@ -93,4 +98,10 @@ input[type="radio"] {
 
 .hidden {
   display: none !important;
+}
+
+@media all and (max-width: 1030px) {
+  .desktop {
+    display: none;
+  }
 }
